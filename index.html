@@ -479,6 +479,7 @@
                 name="Subscribe"
                 id="mail"
                 placeholder="E-mail"
+                required
               />
             </div>
             <button type="submit" class="but-subscribe">
@@ -488,7 +489,6 @@
               </svg>
             </button>
           </form>
-          <div class="foot-button"></div>
         </div>
       </div>
     </footer>
@@ -506,13 +506,15 @@
         <form class="js-speaker-form form">
           <div class="form-desing">
             <div class="form-fild">
-              <label for="user-name">Name</label>
+              <label for="user-name" class="form-label-desing">Name</label>
               <input
                 type="text"
                 name="name"
                 id="user-name"
                 class="form-input"
                 placeholder=" "
+                required
+                minlength="2"
               />
               <svg class="icon-modal" width="18px" height="24px">
                 <use href="./images/symbol-defs.svg#icon-person"></use>
@@ -520,14 +522,16 @@
             </div>
 
             <div class="form-fild">
-              <label for="user-phone">Phone</label>
+              <label for="user-phone" class="form-label-desing">Phone</label>
               <input
-                type="tell"
+                type="tel"
                 name="tell"
                 id="user-phone"
                 class="form-input"
-                autocomplete=""
+                autocomplete="on"
                 placeholder=" "
+                required
+                min="12"
               />
               <svg class="icon-modal" width="18px" height="24px">
                 <use href="./images/symbol-defs.svg#icon-phone"></use>
@@ -535,21 +539,22 @@
             </div>
 
             <div class="form-fild">
-              <label for="user-email">Email</label>
+              <label for="user-email" class="form-label-desing">Email</label>
               <input
                 type="email"
                 name="email"
                 id="user-email"
                 class="form-input"
                 placeholder=" "
+                required
               />
-              <svg class="icon-modal" width="18px" heigth="24px">
+              <svg class="icon-modal" width="18px" height="24px">
                 <use href="./images/symbol-defs.svg#icon-email"></use>
               </svg>
             </div>
 
             <div class="form-fild">
-              <label for="coment">Comment</label>
+              <label for="coment" class="form-label-desing">Comment</label>
               <textarea
                 name="coments"
                 id="coment"
@@ -566,6 +571,8 @@
               name="consent-policy"
               value="css"
               id="privacy-policy"
+              required
+              checked
             />
             <label class="privacy-policy-item" for="privacy-policy"
               >I accept the terms and conditions of the
@@ -573,7 +580,7 @@
             </label>
           </div>
 
-          <button type="submit " class="but-modal-send">Send</button>
+          <button type="submit" class="but-modal-send">Send</button>
         </form>
       </div>
     </div>
